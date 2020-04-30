@@ -5,6 +5,9 @@ service: notes-app-api
 package:
   individually: true
 
+resources:
+  - ${file(resources/api-gateway-errors.yml)}
+
 plugins:
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
